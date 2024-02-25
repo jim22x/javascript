@@ -1,0 +1,126 @@
+/* Reset de márgenes y padding para todos los elementos */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif; /* Establece la fuente predeterminada para todo el documento */
+    box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total de los elementos */
+}
+
+/* Estilos para el contenedor principal */
+.container{
+    width: 100%; /* Ocupa todo el ancho disponible */
+    min-height: 100vh; /* Altura mínima del viewport */
+    background: linear-gradient(135deg,#153677,#4e085f); /* Fondo con un degradado */
+    padding: 10px; /* Espaciado interno */
+}
+
+/* Estilos para la aplicación de tareas */
+.todo-app{
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 540px; /* Ancho máximo */
+    background: #fff; /* Fondo blanco */
+    margin: 100px auto 20px; /* Margen en la parte superior e inferior y centrado horizontalmente */
+    padding: 40px 30px 70px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilos para el título de la aplicación */
+.todo-app h2{
+    color: #002765; /* Color del texto */
+    display: flex; /* Elemento de tipo bloque con display flex */
+    align-items: center; /* Alineación vertical de los elementos */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+/* Estilos para la imagen dentro del título */
+.todo-app h2 img{
+    width: 30px; /* Ancho de la imagen */
+    margin-left: 10px; /* Margen izquierdo */
+}
+
+/* Estilos para las filas de tareas */
+.row{
+    display: flex; /* Elemento de tipo bloque con display flex */
+    align-items: center; /* Alineación vertical de los elementos */
+    justify-content: space-between; /* Distribución equitativa de los elementos */
+    background: #edeef0; /* Fondo gris claro */
+    border-radius: 30px; /* Bordes redondeados */
+    padding-left: 20px; /* Espaciado interno a la izquierda */
+    margin-bottom: 25px; /* Margen inferior */
+}
+
+/* Estilos para el input de nueva tarea */
+input{
+    flex: 1; /* Ocupa todo el espacio disponible */
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno alrededor */
+    background: transparent; /* Fondo transparente */
+    padding: 10px; /* Espaciado interno */
+    font-weight: 14px; /* Grosor de la fuente */
+}
+
+/* Estilos para el botón de agregar tarea */
+button{
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno alrededor */
+    padding: 16px 50px; /* Espaciado interno */
+    background: #ff5945; /* Fondo naranja */
+    color: #fff; /* Color del texto blanco */
+    font-size: 16px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor a una mano */
+    border-radius: 40px; /* Bordes redondeados */
+}
+
+/* Estilos para las tareas en la lista */
+ul li{
+    list-style: none; /* Sin viñetas */
+    font-size: 17px; /* Tamaño de la fuente */
+    padding: 12px 8px 12px 50px; /* Espaciado interno */
+    user-select: none; /* No seleccionable por el usuario */
+    cursor: pointer; /* Cambia el cursor a una mano */
+    position: relative; /* Posición relativa */
+}
+
+/* Estilos para el icono de tarea no completada */
+ul li::before{
+    content: ''; /* Contenido vacío */
+    position: absolute; /* Posición absoluta */
+    height: 28px; /* Altura del icono */
+    width: 28px; /* Ancho del icono */
+    border-radius: 50%; /* Bordes redondeados para un círculo */
+    background-image: url(imagenes/unchecked.png); /* Imagen de tarea no completada */
+    background-size: cover; /* Tamaño de la imagen */
+    background-position: center; /* Posición de la imagen */
+    top: 12px; /* Posición desde arriba */
+    left: 8px; /* Posición desde la izquierda */
+}
+
+/* Estilos para la tarea completada */
+ul li.checked{
+    color:#555; /* Color del texto gris */
+    text-decoration: line-through; /* Texto tachado */
+}
+
+/* Estilos para el icono de tarea completada */
+ul li.checked::before{
+    background-image: url(imagenes/checked.png); /* Imagen de tarea completada */
+}
+
+/* Estilos para el icono de eliminar tarea */
+ul li span{
+    position: absolute; /* Posición absoluta */
+    right: 0; /* Posición desde la derecha */
+    top: 5px; /* Posición desde arriba */
+    width: 40px; /* Ancho del icono */
+    height: 40px; /* Altura del icono */
+    font-size: 22px; /* Tamaño de la fuente */
+    color: #555; /* Color del texto gris */
+    line-height: 40px; /* Altura de línea para centrar verticalmente */
+    text-align: center; /* Alineación centrada */
+    border-radius: 50%; /* Bordes redondeados para un círculo */
+}
+
+/* Estilos para el icono de eliminar tarea al pasar el cursor */
+ul li span:hover{
+    background: #edeef0; /* Fondo gris claro */
+}
